@@ -4,6 +4,9 @@ import Lista from './components/Lista'
 import ElementoLista from './components/ElementoLista'
 import Header from './components/Header';
 
+import { FaHtml5, FaCss3, FaJs } from 'react-icons/fa';
+import { MdEdit } from 'react-icons/md';
+
 function App(props) { // { name, lastname, phone, single }
     const [students] = useState(["Larry", "Moe", "Curly"]);
     const [languages] = useState(["HTML5", "CSS3", "JS"]);
@@ -21,6 +24,18 @@ function App(props) { // { name, lastname, phone, single }
             <h1>
                 {props.name} {props.lastname}
             </h1>
+            <hr />
+            <ul className="list-group">
+                <li className="list-group-item">
+                    HTML5 <FaHtml5 /> <MdEdit />
+                </li>
+                <li className="list-group-item">
+                    CSS3 <FaCss3 />
+                </li>
+                <li className="list-group-item">
+                    JS <FaJs />
+                </li>
+            </ul>
             <hr />
             <Lista>
                 {/* <ElementoLista texto="HTML5" className="list-group-item" />
